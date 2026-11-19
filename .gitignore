@@ -1,0 +1,8 @@
+# Mechanical downloads are distributed on MakerWorld, not in this repository.
+/models/
+/build/
+__pycache__/
+
+/firmware/*.uf2
+
+/JoystickPad.uf2

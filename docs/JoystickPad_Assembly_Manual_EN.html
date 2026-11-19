@@ -1,0 +1,126 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>6-Key Joystick Pad — English Assembly Manual</title><style>
+:root{color-scheme:light;--ink:#18303a;--accent:#176d60;--muted:#4a655e;--line:#d5e4de}*{box-sizing:border-box}body{margin:0;background:#edf3f0;color:var(--ink);font:16px/1.65 system-ui,Arial,sans-serif}nav{max-width:1050px;margin:auto;display:flex;gap:20px;justify-content:space-between;align-items:center;padding:18px 25px}nav a{color:var(--accent)}button{font:inherit;background:white;color:var(--accent);border:1px solid var(--line);padding:8px 15px;border-radius:8px;cursor:pointer}main{max-width:1050px;margin:0 auto 35px;background:white;padding:35px 55px;box-shadow:0 3px 25px #18302a12;border-radius:10px}h1{font-size:2.2rem;line-height:1.2;letter-spacing:-.025em}h2{font-size:1.55rem;margin:2.6rem 0 1rem;padding-top:.8rem;border-top:1px solid var(--line)}h3{font-size:1.16rem;margin:2rem 0 .65rem}a{color:var(--accent);text-underline-offset:3px}p,ul,ol{margin:.8rem 0}li{margin:.35rem 0}img{display:block;max-width:100%;max-height:440px;object-fit:contain;margin:20px auto;background:#f2f9f8;border-radius:9px}img[src^="data:image/svg"]{width:100%;height:auto;max-height:none}table{border-collapse:collapse;width:100%;font-size:.92rem;display:block;overflow-x:auto}td,th{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:9px 13px}th{background:#edf5f1;color:var(--accent)}code{background:#edf4f0;padding:2px 5px;border-radius:4px;font-size:.9em}pre{background:#edf4f0;padding:16px;overflow:auto;border-radius:7px}pre code{padding:0}footer{max-width:1050px;margin:0 auto 30px;text-align:center;color:var(--muted);font-size:.85rem}@media(max-width:650px){body{font-size:15px}nav{padding:14px;align-items:start}main{padding:20px 18px;border-radius:0}h1{font-size:1.8rem}td,th{padding:7px 9px}img{max-height:360px}}@page{size:A4;margin:14mm}@media print{body{background:white;font-size:11pt}nav,footer{display:none}main{box-shadow:none;margin:0;padding:0;max-width:none}h2,h3{break-after:avoid}img{max-height:230px}table,pre,img{break-inside:avoid}a{color:inherit;text-decoration:none}h1{font-size:25pt}h2{font-size:17pt}h3{font-size:13pt}}
+</style></head><body><nav><a href="#3-assembly">Guide &amp; firmware downloads</a><button type="button" onclick="window.print()">Print manual</button></nav><main><h1 id="6-key-joystick-pad">6-Key Joystick Pad</h1>
+<p>Download the <strong>3MF print project</strong> from the corresponding <strong>MakerWorld model page</strong>.</p>
+<h2 id="1-parts">1. Parts</h2>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Quantity and specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RP2040 Pro Micro USB-C board</td>
+<td>1; nominal 33 × 18 mm PCB; tested board uses Winbond W25Q32 flash</td>
+</tr>
+<tr>
+<td>HW-504 / KY-023-style joystick</td>
+<td>1; two analog axes + push switch; CAD PCB target <strong>34 × 26 × 1.6 mm</strong></td>
+</tr>
+<tr>
+<td>M3 machine screws</td>
+<td><strong>8 × M3 × 10 mm</strong>; 10 mm measured under the head; flat seating underside, not countersunk</td>
+</tr>
+<tr>
+<td>M3 heat-set brass inserts</td>
+<td><strong>8 × M3 internal thread, OD approximately 4 mm × length 5 mm</strong></td>
+</tr>
+<tr>
+<td>MX switches and keycaps</td>
+<td>6 of each</td>
+</tr>
+<tr>
+<td>Insulated wire and solder</td>
+<td>For six key signals, common ground, and five joystick connections</td>
+</tr>
+<tr>
+<td>USB data cable</td>
+<td>1; USB-C at the controller end; suitable OTG connection for Android</td>
+</tr>
+<tr>
+<td>PCB fixing</td>
+<td>Original printed clip + cable tie up to 5 mm wide, or a small amount of silicone adhesive</td>
+</tr>
+<tr>
+<td>Tools</td>
+<td>Soldering iron, desoldering wick/pump, cutters, screwdriver; multimeter recommended</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Screw/insert distribution:</strong> front plate <strong>4</strong>, lid-to-body <strong>2</strong>, joystick retaining tabs <strong>2</strong>. Inserts go into <strong>six body posts and two lid posts</strong>. M3 is the internal thread size; the insert outside diameter is approximately <strong>4 mm</strong>. CAD insert bores: Ø4 × 6 mm deep; screw clearance holes: Ø3.4 mm.</p>
+<p><strong>The joystick&#x27;s stock five-pin header and plastic carrier must be removed to fit this build.</strong> Solder wires directly to its five pads. Do not bend the header or add female jumper housings.</p>
+<p>The joystick uses a 34 × 26 mm PCB footprint; the <a href="https://eduino.cafe24.com/product/detail.html?product_no=78">reference stock module</a> is listed as 40 × 26 × 32 mm overall before modification. Check your module&#x27;s PCB and component outline.</p>
+<h2 id="2-wiring">2. Wiring</h2>
+<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMTIwIDY2MCIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsbGVkYnk9InRpdGxlIGRlc2MiPg0KPHRpdGxlIGlkPSJ0aXRsZSI+U2l4LWtleSBqb3lzdGljayBwYWQgd2lyaW5nPC90aXRsZT48ZGVzYyBpZD0iZGVzYyI+RWFjaCBrZXkgaGFzIGl0cyBvd24gR1BJTyAyIHRocm91Z2ggNyBhbmQgc2hhcmVzIGdyb3VuZC4gSm95c3RpY2sgVlJYIGdvZXMgdG8gR1BJTyAyNiwgVlJZIHRvIDI3LCBTVyB0byA4LCBwb3dlciB0byAzVjMgYW5kIEdORCB0byBHLjwvZGVzYz4NCjxzdHlsZT50ZXh0e2ZvbnQtZmFtaWx5OkFyaWFsLHNhbnMtc2VyaWY7ZmlsbDojMTgzMDNhfS50aXRsZXtmb250LXNpemU6MjdweDtmb250LXdlaWdodDo3MDB9LmxhYmVse2ZvbnQtc2l6ZToyMHB4O2ZvbnQtd2VpZ2h0OjcwMH0uc21hbGx7Zm9udC1zaXplOjE3cHh9LnBpbntmb250LXNpemU6MTlweDtmb250LWZhbWlseTpDb25zb2xhcyxtb25vc3BhY2V9LndpcmV7ZmlsbDpub25lO3N0cm9rZS13aWR0aDo0O3N0cm9rZS1saW5lam9pbjpyb3VuZH08L3N0eWxlPg0KPHJlY3Qgd2lkdGg9IjExMjAiIGhlaWdodD0iNjYwIiByeD0iMTgiIGZpbGw9IiNmMWY3ZjUiLz4NCjx0ZXh0IHg9IjM1IiB5PSI0NSIgY2xhc3M9InRpdGxlIj5Mb2dpY2FsIHdpcmluZyDigJQgdXNlIHRoZSBHUElPIGxhYmVscyBwcmludGVkIG9uIHlvdXIgYm9hcmQ8L3RleHQ+DQo8cmVjdCB4PSIzMCIgeT0iOTUiIHdpZHRoPSIzMjAiIGhlaWdodD0iNDQwIiByeD0iMTUiIGZpbGw9IndoaXRlIiBzdHJva2U9IiNhOWM2YmQiLz4NCjx0ZXh0IHg9IjE5MCIgeT0iMTM1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ibGFiZWwiPkZyb250IGtleXMgwrcgZnJvbnQgdmlldzwvdGV4dD4NCjxnIGZpbGw9IiNlZGY0ZjEiIHN0cm9rZT0iI2FhYzViYyI+PHJlY3QgeD0iNTIiIHk9IjE3MCIgd2lkdGg9IjEyNSIgaGVpZ2h0PSI4NSIgcng9IjEwIi8+PHJlY3QgeD0iMjAyIiB5PSIxNzAiIHdpZHRoPSIxMjUiIGhlaWdodD0iODUiIHJ4PSIxMCIvPjxyZWN0IHg9IjUyIiB5PSIyODAiIHdpZHRoPSIxMjUiIGhlaWdodD0iODUiIHJ4PSIxMCIvPjxyZWN0IHg9IjIwMiIgeT0iMjgwIiB3aWR0aD0iMTI1IiBoZWlnaHQ9Ijg1IiByeD0iMTAiLz48cmVjdCB4PSI1MiIgeT0iMzkwIiB3aWR0aD0iMTI1IiBoZWlnaHQ9Ijg1IiByeD0iMTAiLz48cmVjdCB4PSIyMDIiIHk9IjM5MCIgd2lkdGg9IjEyNSIgaGVpZ2h0PSI4NSIgcng9IjEwIi8+PC9nPg0KPGcgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj48dGV4dCB4PSIxMTQiIHk9IjIwMSI+VG9wIGxlZnQ8L3RleHQ+PHRleHQgeD0iMTE0IiB5PSIyMzIiPkdQSU8gMiDCtyBBPC90ZXh0Pjx0ZXh0IHg9IjI2NCIgeT0iMjAxIj5Ub3AgcmlnaHQ8L3RleHQ+PHRleHQgeD0iMjY0IiB5PSIyMzIiPkdQSU8gMyDCtyBCPC90ZXh0Pjx0ZXh0IHg9IjExNCIgeT0iMzExIj5NaWRkbGUgbGVmdDwvdGV4dD48dGV4dCB4PSIxMTQiIHk9IjM0MiI+R1BJTyA0IMK3IFg8L3RleHQ+PHRleHQgeD0iMjY0IiB5PSIzMTEiPk1pZGRsZSByaWdodDwvdGV4dD48dGV4dCB4PSIyNjQiIHk9IjM0MiI+R1BJTyA1IMK3IFk8L3RleHQ+PHRleHQgeD0iMTE0IiB5PSI0MjEiPkJvdHRvbSBsZWZ0PC90ZXh0Pjx0ZXh0IHg9IjExNCIgeT0iNDUyIj5HUElPIDYgwrcgTDE8L3RleHQ+PHRleHQgeD0iMjY0IiB5PSI0MjEiPkJvdHRvbSByaWdodDwvdGV4dD48dGV4dCB4PSIyNjQiIHk9IjQ1MiI+R1BJTyA3IMK3IFIxPC90ZXh0PjwvZz4NCjx0ZXh0IHg9IjE5MCIgeT0iNTEwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPk9uZSBzaWduYWwgd2lyZSBwZXIgc3dpdGNoPC90ZXh0Pg0KPHBhdGggZD0iTTM1MCAyOTBINDE4IiBjbGFzcz0id2lyZSIgc3Ryb2tlPSIjMzA3Y2E5Ii8+PHRleHQgeD0iMzgxIiB5PSIyNzMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+NsOXPC90ZXh0Pg0KPHJlY3QgeD0iNDIwIiB5PSI5NSIgd2lkdGg9IjMwNSIgaGVpZ2h0PSI1MDAiIHJ4PSIxNSIgZmlsbD0iI2RjZWJlNyIgc3Ryb2tlPSIjNTc4NzdiIi8+DQo8dGV4dCB4PSI1NzIiIHk9IjEzNSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9ImxhYmVsIj5SUDIwNDAgUHJvIE1pY3JvPC90ZXh0Pg0KPHRleHQgeD0iNDQzIiB5PSIxOTIiIGNsYXNzPSJwaW4iPjIg4oaSIEE8L3RleHQ+PHRleHQgeD0iNDQzIiB5PSIyMzIiIGNsYXNzPSJwaW4iPjMg4oaSIEI8L3RleHQ+PHRleHQgeD0iNDQzIiB5PSIyNzIiIGNsYXNzPSJwaW4iPjQg4oaSIFg8L3RleHQ+PHRleHQgeD0iNDQzIiB5PSIzMTIiIGNsYXNzPSJwaW4iPjUg4oaSIFk8L3RleHQ+PHRleHQgeD0iNDQzIiB5PSIzNTIiIGNsYXNzPSJwaW4iPjYg4oaSIEwxPC90ZXh0Pjx0ZXh0IHg9IjQ0MyIgeT0iMzkyIiBjbGFzcz0icGluIj43IOKGkiBSMTwvdGV4dD4NCjxnIGNsYXNzPSJwaW4iIHRleHQtYW5jaG9yPSJlbmQiPjx0ZXh0IHg9IjcwNiIgeT0iMjA1Ij4yNjwvdGV4dD48dGV4dCB4PSI3MDYiIHk9IjI2NSI+Mjc8L3RleHQ+PHRleHQgeD0iNzA2IiB5PSIzMjUiPjg8L3RleHQ+PHRleHQgeD0iNzA2IiB5PSIzODUiPjNWMzwvdGV4dD48dGV4dCB4PSI3MDYiIHk9IjQ0NSI+RzwvdGV4dD48L2c+DQo8cmVjdCB4PSI4ODIiIHk9Ijk1IiB3aWR0aD0iMjA4IiBoZWlnaHQ9IjQxMCIgcng9IjE1IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSIjYTljNmJkIi8+PHRleHQgeD0iOTg2IiB5PSIxMzUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJsYWJlbCI+Sm95c3RpY2s8L3RleHQ+DQo8ZyBjbGFzcz0icGluIj48dGV4dCB4PSI5MDAiIHk9IjIwNSI+VlJYPC90ZXh0Pjx0ZXh0IHg9IjkwMCIgeT0iMjY1Ij5WUlk8L3RleHQ+PHRleHQgeD0iOTAwIiB5PSIzMjUiPlNXPC90ZXh0Pjx0ZXh0IHg9IjkwMCIgeT0iMzg1Ij41ViAvIFZDQzwvdGV4dD48dGV4dCB4PSI5MDAiIHk9IjQ0NSI+R05EPC90ZXh0PjwvZz4NCjxwYXRoIGQ9Ik03MjUgMTk4SDg4MiIgY2xhc3M9IndpcmUiIHN0cm9rZT0iIzMwN2NhOSIvPjxwYXRoIGQ9Ik03MjUgMjU4SDg4MiIgY2xhc3M9IndpcmUiIHN0cm9rZT0iIzNjOGE3NCIvPjxwYXRoIGQ9Ik03MjUgMzE4SDg4MiIgY2xhc3M9IndpcmUiIHN0cm9rZT0iI2I0NzcyNCIvPjxwYXRoIGQ9Ik03MjUgMzc4SDg4MiIgY2xhc3M9IndpcmUiIHN0cm9rZT0iI2I3NGQ0NSIvPjxwYXRoIGQ9Ik03MjUgNDM4SDg4MiIgY2xhc3M9IndpcmUiIHN0cm9rZT0iIzg5NjQzZCIvPg0KPHBhdGggZD0iTTE5MCA1MzVWNTY4SDY2OFY0NTUiIGNsYXNzPSJ3aXJlIiBzdHJva2U9IiM4OTY0M2QiLz4NCjx0ZXh0IHg9IjI5MCIgeT0iNTU5IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBjbGFzcz0ic21hbGwiPkFsbCBzaXggb3RoZXIgY29udGFjdHMg4oaSIHNoYXJlZCBHTkQ8L3RleHQ+DQo8dGV4dCB4PSI1NzIiIHk9IjUxOCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgY2xhc3M9InNtYWxsIj5Qb3dlciB0aGUgam95c3RpY2sgZnJvbSAzVjMuPC90ZXh0Pg0KPHRleHQgeD0iNTcyIiB5PSI1NDYiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGNsYXNzPSJzbWFsbCI+RG8gbm90IHVzZSB0aGUgYm9hcmQncyA1ViBwYWQuPC90ZXh0Pg0KPHRleHQgeD0iMzUiIHk9IjYzMCIgY2xhc3M9InNtYWxsIj5Db25uZWN0aW9uIGRpYWdyYW0gb25seTogcGFkIHBvc2l0aW9ucywgd2lyZSBjb2xvdXJzLCBhbmQgam95c3RpY2sgcGluIG9yZGVyIGNhbiB2YXJ5LjwvdGV4dD4NCjwvc3ZnPg0K" alt="Logical wiring diagram"></img></p>
+<p>Use the <strong>GPIO numbers printed on the RP2040</strong>, not physical pin numbers. Key positions below are viewed from the front.</p>
+<table>
+<thead>
+<tr>
+<th>Key row</th>
+<th>Left key</th>
+<th>Right key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Top</td>
+<td>GPIO <strong>2</strong> → A</td>
+<td>GPIO <strong>3</strong> → B</td>
+</tr>
+<tr>
+<td>Middle</td>
+<td>GPIO <strong>4</strong> → X</td>
+<td>GPIO <strong>5</strong> → Y</td>
+</tr>
+<tr>
+<td>Bottom</td>
+<td>GPIO <strong>6</strong> → L1</td>
+<td>GPIO <strong>7</strong> → R1</td>
+</tr>
+</tbody>
+</table>
+<p>Connect each key&#x27;s other contact to a shared <strong>GND → G</strong> wire.</p>
+<table>
+<thead>
+<tr>
+<th>Joystick pad</th>
+<th>RP2040</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GND</td>
+<td>G</td>
+</tr>
+<tr>
+<td>5V / VCC</td>
+<td><strong>3V3</strong></td>
+</tr>
+<tr>
+<td>VRX</td>
+<td><strong>26</strong></td>
+</tr>
+<tr>
+<td>VRY</td>
+<td><strong>27</strong></td>
+</tr>
+<tr>
+<td>SW / stick click</td>
+<td><strong>8</strong> → L3, HID button 14</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Use 3V3 for the joystick, even if its pad is marked 5V. Do not connect it to the RP2040 board&#x27;s 5V pad.</strong></p>
+<h2 id="3-assembly">3. Assembly</h2>
+<ol>
+<li><strong>Print and dry-fit.</strong> Use the MakerWorld 3MF with its saved plate layout and enabled supports. Remove support remnants and check the body, front plate, lid, and matching retaining tabs.</li>
+<li><strong>Fit the eight inserts.</strong> Heat-set four in the body&#x27;s front posts, two in the body&#x27;s top posts, and two inside the lid. Seat them flush and let them cool.</li>
+<li><strong>Fit the six switches.</strong> Press them into the front plate from outside. Solder individual signal wires and a shared ground chain using the wiring table.</li>
+<li><strong>Prepare the joystick.</strong> With USB disconnected, desolder and remove the <strong>five-pin connector header and its plastic carrier</strong> without lifting the pads. Solder the five wires directly and keep the joints low. Seat the PCB flat inside the lid and secure the two tabs with <strong>two M3 × 10 mm screws</strong>. Do not force a PCB that does not sit flat.</li>
+<li><strong>Fit the RP2040 and close.</strong> Place it on the original cradle with USB-C facing the bottom opening. Use the printed clip/tie or silicone, keeping the USB socket, buttons, and contacts clear. Route wires away from edges and screw posts. Secure the front plate with <strong>four M3 × 10 mm screws</strong>, then the lid with <strong>two M3 × 10 mm screws</strong>. Fit the keycaps.</li>
+<li><strong>Flash and test.</strong> <a href="https://github.com/ddung2ina-lab/joystick-pad/releases/download/v1.0.0/JoystickPad.uf2">Download JoystickPad.uf2</a>. Hold <strong>BOOT</strong> while connecting to a PC, release it when <strong>RPI-RP2</strong> appears, and copy the UF2 onto that drive. Reconnect normally without BOOT, with the stick centred. Test all six keys, both axes, and stick click. Assign <strong>L3</strong> to the desired action in your controller settings.</li>
+</ol>
+<p>The editable Arduino source is <a href="https://github.com/ddung2ina-lab/joystick-pad/blob/main/firmware/JoystickPad/JoystickPad.ino">JoystickPad.ino</a>. See <a href="https://github.com/ddung2ina-lab/joystick-pad/blob/main/firmware/README.md">firmware/README.md</a> to change button mappings and rebuild with the required <strong>W25Q32 boot-code setting</strong>.</p>
+</main><footer>Original USB body · Working W25Q32 firmware · English assembly guide</footer></body></html>

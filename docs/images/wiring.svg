@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 660" role="img" aria-labelledby="title desc">
+<title id="title">Six-key joystick pad wiring</title><desc id="desc">Each key has its own GPIO 2 through 7 and shares ground. Joystick VRX goes to GPIO 26, VRY to 27, SW to 8, power to 3V3 and GND to G.</desc>
+<style>text{font-family:Arial,sans-serif;fill:#18303a}.title{font-size:27px;font-weight:700}.label{font-size:20px;font-weight:700}.small{font-size:17px}.pin{font-size:19px;font-family:Consolas,monospace}.wire{fill:none;stroke-width:4;stroke-linejoin:round}</style>
+<rect width="1120" height="660" rx="18" fill="#f1f7f5"/>
+<text x="35" y="45" class="title">Logical wiring — use the GPIO labels printed on your board</text>
+<rect x="30" y="95" width="320" height="440" rx="15" fill="white" stroke="#a9c6bd"/>
+<text x="190" y="135" text-anchor="middle" class="label">Front keys · front view</text>
+<g fill="#edf4f1" stroke="#aac5bc"><rect x="52" y="170" width="125" height="85" rx="10"/><rect x="202" y="170" width="125" height="85" rx="10"/><rect x="52" y="280" width="125" height="85" rx="10"/><rect x="202" y="280" width="125" height="85" rx="10"/><rect x="52" y="390" width="125" height="85" rx="10"/><rect x="202" y="390" width="125" height="85" rx="10"/></g>
+<g text-anchor="middle" class="small"><text x="114" y="201">Top left</text><text x="114" y="232">GPIO 2 · A</text><text x="264" y="201">Top right</text><text x="264" y="232">GPIO 3 · B</text><text x="114" y="311">Middle left</text><text x="114" y="342">GPIO 4 · X</text><text x="264" y="311">Middle right</text><text x="264" y="342">GPIO 5 · Y</text><text x="114" y="421">Bottom left</text><text x="114" y="452">GPIO 6 · L1</text><text x="264" y="421">Bottom right</text><text x="264" y="452">GPIO 7 · R1</text></g>
+<text x="190" y="510" text-anchor="middle" class="small">One signal wire per switch</text>
+<path d="M350 290H418" class="wire" stroke="#307ca9"/><text x="381" y="273" text-anchor="middle" class="small">6×</text>
+<rect x="420" y="95" width="305" height="500" rx="15" fill="#dcebe7" stroke="#57877b"/>
+<text x="572" y="135" text-anchor="middle" class="label">RP2040 Pro Micro</text>
+<text x="443" y="192" class="pin">2 → A</text><text x="443" y="232" class="pin">3 → B</text><text x="443" y="272" class="pin">4 → X</text><text x="443" y="312" class="pin">5 → Y</text><text x="443" y="352" class="pin">6 → L1</text><text x="443" y="392" class="pin">7 → R1</text>
+<g class="pin" text-anchor="end"><text x="706" y="205">26</text><text x="706" y="265">27</text><text x="706" y="325">8</text><text x="706" y="385">3V3</text><text x="706" y="445">G</text></g>
+<rect x="882" y="95" width="208" height="410" rx="15" fill="white" stroke="#a9c6bd"/><text x="986" y="135" text-anchor="middle" class="label">Joystick</text>
+<g class="pin"><text x="900" y="205">VRX</text><text x="900" y="265">VRY</text><text x="900" y="325">SW</text><text x="900" y="385">5V / VCC</text><text x="900" y="445">GND</text></g>
+<path d="M725 198H882" class="wire" stroke="#307ca9"/><path d="M725 258H882" class="wire" stroke="#3c8a74"/><path d="M725 318H882" class="wire" stroke="#b47724"/><path d="M725 378H882" class="wire" stroke="#b74d45"/><path d="M725 438H882" class="wire" stroke="#89643d"/>
+<path d="M190 535V568H668V455" class="wire" stroke="#89643d"/>
+<text x="290" y="559" text-anchor="middle" class="small">All six other contacts → shared GND</text>
+<text x="572" y="518" text-anchor="middle" class="small">Power the joystick from 3V3.</text>
+<text x="572" y="546" text-anchor="middle" class="small">Do not use the board's 5V pad.</text>
+<text x="35" y="630" class="small">Connection diagram only: pad positions, wire colours, and joystick pin order can vary.</text>
+</svg>
